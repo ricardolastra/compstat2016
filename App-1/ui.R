@@ -13,21 +13,23 @@ dashboardPage(
   dashboardHeader(title = "EstComp"),
   
   
-  # TITULOS E INICIO DEL SHINY 
+  # TITULOS E INICIO DEL SHINY (DASHBOARD)
   dashboardSidebar(
     sidebarMenu(
       menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
-      menuItem("Widgets", icon = icon("th"), tabName = "widgets",
-               badgeLabel = "new", badgeColor = "green")
+      menuItem("Método - Función Inversa"),
+      menuItem("Integración numérica - Monte Carlo"),
+      menuItem("Tarea 3. The_MCMC_revolution"),
+      menuItem("Tarea 4-6. Metropolis-Hastings"),
+      menuItem("Créditos")
     )
   ),
   dashboardBody(
     img(src="itam.png"),
     h3("Ricardo Lastra Cuevas  - 000160167"),
-    h4("Shiny-App Tareas del semestre y algo mas..."),
     mainPanel(
       tabsetPanel(type = "tabs",
-                  tabPanel("Tarea 1. Método de la Función Inversa",
+                  tabPanel("Tarea 1. Método - Función Inversa",
                           sidebarLayout(
                              sidebarPanel(
                                sliderInput("simula",
@@ -48,7 +50,7 @@ dashboardPage(
                           )
                   ),
 
-                  tabPanel("Tarea 2. Integración numérica usando Monte Carlo",
+                  tabPanel("Tarea 2. Integración numérica - Monte Carlo",
                            sidebarLayout(
                              sidebarPanel(
                                textInput("funcion",
@@ -86,11 +88,29 @@ dashboardPage(
                              h3("Resumén"),
                              tags$iframe(src="The_MCMC_revolution.pdf", width="1100", height="500")
                              )
-                           )
+                           ),
+                  
+                  
+                  tabPanel("Tarea 4-6. Metropolis-Hastings",
+                           mainPanel(
+                             h3("SE ANEXA CODIGO EN GIT"))),
+                             
+                             
+                  tabPanel("Créditos",
+                           mainPanel(h4("Agradecimientos:       
+                                        Mauricio G. Tec, 
+                                        A todos los compañeros de la maestria de DS, 
+                                        A Guille por donar su depa de laboratorio, 
+                                        A mis compañeros de trabajo, 
+                                        A el ITAM,
+                                        A a. Gelman, G. O. Roberts and W.R. Gilks y 
+                                        A la Universidad de Cambridge.")))
+                  
+                  
                   )
       )
     )
-  )
+)
 
   
 

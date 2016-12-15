@@ -53,9 +53,11 @@ shinyServer(function(input, output){
     funcion <- function(x) input$lambda * exp(- (x * input$lambda)) * input$simula/(input$lambda*10)
     aplicada <- sapply(X2, funcion)
     
-    plot_ly(x=X,type="histogram", opacity=0.6, name = "Simulación función inversa") %>%
-      add_trace(x=X2, y=aplicada, type="bar", opacity=1, name = "PDF")
-      
+    plot_ly(x=X,type="histogram", opacity=0.6, name = "Func. Inversa", 
+            marker = list (color="rgb(0,102, 51),"), opacity = .5) %>%
+      add_trace(x=X2, y=aplicada, type="bar", opacity=1, name = "Func. Exp",
+                marker = list (color="rgb(160, 160, 160),"), opacity = .5)
+   #SE MEJORA GRAFICO   
     
   })
   
