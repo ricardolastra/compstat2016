@@ -1,3 +1,3 @@
 # compstat2016
 Repo for class
--Preparando Git
+- Git de Ricardo Lastra Cuevas - 000160167
